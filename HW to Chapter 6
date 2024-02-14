@@ -1,0 +1,33 @@
+import time
+
+# Start the program
+print("Enter any word:")
+start_time = time.time()  # Record the start time
+
+# Get the input from the user
+word = input()
+
+# Calculate the time taken
+end_time = time.time()
+time_taken = end_time - start_time
+
+# Check if the word is empty
+if not word:
+    print("You did not enter any word")
+else:
+    # Calculate the length of the word
+    length_of_word = len(word)
+
+    # Classify the word
+    if length_of_word <= 5:
+        word_classification = "short"
+    elif 5 < length_of_word <= 10:
+        word_classification = "medium"
+    else:
+        word_classification = "long"
+
+    # Output the results
+    print(f"Your word is {word}")
+    print(f"The length of the word is {length_of_word}")
+    print(f"It is a {word_classification} word")
+    print(f"Your reaction time is {time_taken:.2f} seconds")
